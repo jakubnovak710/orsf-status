@@ -1,36 +1,32 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+owner: jakubnovak710
+repo: orsf-status
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Test Broken Site
-    url: https://thissitedoesnotexist.koj.co
-  - name: IPv6 test
-    url: forwardemail.net
-    port: 80
-    check: "tcp-ping"
-    ipv6: true
+  - name: Web (orsf.sk)
+    url: https://orsf.sk
+  - name: API (api.orsf.sk)
+    url: https://api.orsf.sk/healthz
+  - name: Search (vyhľadávanie)
+    url: https://api.orsf.sk/v1/search?q=test&limit=1
+  - name: Company detail
+    url: https://api.orsf.sk/v1/companies/12345678
+    expectedStatusCodes:
+      - 200
+      - 404
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.orsf.sk
+  logoUrl: https://orsf.sk/favicon.ico
+  name: ORSF Status
+  introTitle: "**ORSF** — status verejných služieb"
+  introMessage: "Real-time monitoring webu, API a vyhľadávania [orsf.sk](https://orsf.sk). Dáta každých 5 minút z GitHub Actions. Incidenty reportované cez [GitHub Issues](https://github.com/jakubnovak710/orsf-status/issues)."
   navbar:
     - title: Status
       href: /
+    - title: ORSF
+      href: https://orsf.sk
     - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+      href: https://github.com/jakubnovak710/orsf-status
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+assignees:
+  - jakubnovak710

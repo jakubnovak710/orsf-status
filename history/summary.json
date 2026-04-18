@@ -22,19 +22,19 @@
     "url": "https://api.orsf.sk/healthz",
     "icon": "https://icons.duckduckgo.com/ip3/api.orsf.sk.ico",
     "slug": "api-api-orsf-sk",
-    "status": "down",
+    "status": "up",
     "uptime": "0.00%",
     "uptimeDay": "0.00%",
     "uptimeWeek": "0.00%",
     "uptimeMonth": "0.00%",
     "uptimeYear": "0.00%",
-    "time": 716,
-    "timeDay": 716,
-    "timeWeek": 716,
-    "timeMonth": 716,
-    "timeYear": 716,
+    "time": 613,
+    "timeDay": 613,
+    "timeWeek": 613,
+    "timeMonth": 613,
+    "timeYear": 613,
     "dailyMinutesDown": {
-      "2026-04-18": 0
+      "2026-04-18": 188
     }
   },
   {

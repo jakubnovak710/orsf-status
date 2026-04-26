@@ -1,7 +1,7 @@
 url: https://api.orsf.sk/v1/companies/12345678
-status: down
-code: 500
-responseTime: 10268
-lastUpdated: 2026-04-26T22:21:12.352Z
+status: up
+code: 404
+responseTime: 407
+lastUpdated: 2026-04-26T23:02:39.886Z
 startTime: 2026-04-18T09:32:20.514Z
 generator: Upptime <https://github.com/upptime/upptime>

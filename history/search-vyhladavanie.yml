@@ -1,7 +1,7 @@
 url: https://api.orsf.sk/v1/search?q=test&limit=1
 status: up
 code: 200
-responseTime: 1509
-lastUpdated: 2026-05-17T23:59:32.307Z
+responseTime: 507
+lastUpdated: 2026-05-19T00:10:33.356Z
 startTime: 2026-04-18T09:32:19.951Z
 generator: Upptime <https://github.com/upptime/upptime>

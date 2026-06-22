@@ -2,31 +2,79 @@ owner: jakubnovak710
 repo: orsf-status
 
 sites:
+  # ── Verejné rozhrania ──────────────────────────────────────────────
   - name: Web (orsf.sk)
     url: https://orsf.sk
+    maxResponseTime: 2000
+
   - name: API (api.orsf.sk)
     url: https://api.orsf.sk/healthz
-  - name: Search (vyhľadávanie)
+    maxResponseTime: 500
+
+  - name: API readyz (DB + Redis)
+    url: https://api.orsf.sk/readyz
+    maxResponseTime: 1000
+
+  # ── Kľúčové endpointy ──────────────────────────────────────────────
+  - name: IČO lookup (autofill)
+    url: https://api.orsf.sk/v1/lookup/55609830
+    maxResponseTime: 300
+
+  - name: Search
     url: https://api.orsf.sk/v1/search?q=test&limit=1
+    maxResponseTime: 1500
+
   - name: Company detail
-    url: https://api.orsf.sk/v1/companies/12345678
+    url: https://api.orsf.sk/v1/companies/55609830
+    maxResponseTime: 1500
     expectedStatusCodes:
       - 200
       - 404
+
+  # ── Ingestor & data freshness ──────────────────────────────────────
+  # /v1/status agreguje stav všetkých ingestorov (RPO/ORSR/RÚZ/FS-DPH).
+  # HTTP 503 keď je posledný sync starší než 72h → incident open.
+  - name: Ingestor freshness
+    url: https://api.orsf.sk/v1/status
+    maxResponseTime: 1000
+
+  # ── Doc & SDK ──────────────────────────────────────────────────────
+  - name: OpenAPI spec
+    url: https://api.orsf.sk/v1/openapi.json
+    maxResponseTime: 1500
 
 status-website:
   cname: status.orsf.sk
   logoUrl: https://orsf.sk/favicon.ico
   name: ORSF Status
   introTitle: "**ORSF** — status verejných služieb"
-  introMessage: "Real-time monitoring webu, API a vyhľadávania [orsf.sk](https://orsf.sk). Dáta každých 5 minút z GitHub Actions. Incidenty reportované cez [GitHub Issues](https://github.com/jakubnovak710/orsf-status/issues)."
+  introMessage: |
+    Real-time monitoring **[orsf.sk](https://orsf.sk)** — web, API, vyhľadávanie,
+    IČO lookup, ingestorov a aktuálnosti dát.
+
+    **1.26M+ slovenských firiem** indexovaných, denne synchronizované zo
+    zdrojov RPO, ORSR, RÚZ a FS DPH. Dáta pod licenciou
+    [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+    Monitoring beží každých 5 minút z GitHub Actions naprieč svetom.
+    Incidenty sú reportované cez
+    [GitHub Issues](https://github.com/jakubnovak710/orsf-status/issues)
+    a riešené v pracovných dňoch do 24h.
+
+    Pre integrácie alebo SLA kontakt: **hello@jakubnovak.dev**
   navbar:
     - title: Status
       href: /
     - title: ORSF
       href: https://orsf.sk
+    - title: API docs
+      href: https://api.orsf.sk/v1/docs
     - title: GitHub
       href: https://github.com/jakubnovak710/orsf-status
 
 assignees:
   - jakubnovak710
+
+# User-Agent ktorý Upptime posiela — pridať do Caddy whitelistu ak zavedieme
+# bot filter na status endpointy.
+user-agent: Upptime

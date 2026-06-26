@@ -1,7 +1,7 @@
 url: https://api.orsf.sk/v1/status
-status: down
+status: degraded
 code: 503
-responseTime: 227
-lastUpdated: 2026-06-26T17:22:00.466Z
+responseTime: 2273
+lastUpdated: 2026-06-26T19:14:00.062Z
 startTime: 2026-06-22T13:55:30.484Z
 generator: Upptime <https://github.com/upptime/upptime>

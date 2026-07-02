@@ -1,7 +1,7 @@
 url: https://api.orsf.sk/healthz
-status: degraded
+status: up
 code: 200
-responseTime: 871
-lastUpdated: 2026-07-02T00:11:36.070Z
+responseTime: 165
+lastUpdated: 2026-07-02T04:31:30.588Z
 startTime: 2026-04-18T09:32:16.577Z
 generator: Upptime <https://github.com/upptime/upptime>

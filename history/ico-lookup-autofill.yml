@@ -1,7 +1,7 @@
 url: https://api.orsf.sk/v1/lookup/55609830
-status: up
+status: degraded
 code: 200
-responseTime: 148
-lastUpdated: 2026-07-05T11:40:10.899Z
+responseTime: 547
+lastUpdated: 2026-07-05T14:28:04.905Z
 startTime: 2026-06-22T13:55:26.478Z
 generator: Upptime <https://github.com/upptime/upptime>

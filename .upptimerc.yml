@@ -1,6 +1,11 @@
 owner: jakubnovak710
 repo: orsf-status
 
+# maxResponseTime kalibrácia (2026-07-11): prah = ~3× týždenný priemer.
+# Upptime meria z GitHub Actions runnerov (US/svet) cez Cloudflare do Helsínk —
+# 300-700 ms je normálny sieťový jitter, NIE degradácia servera (origin servuje
+# ~1 ms). Prah pod/na priemere = garantovaný flapping (incidenty #91-#120:
+# 25 falošných "degraded" za 6 dní). Priemery: api/<slug>/response-time-week.json.
 sites:
   # ── Verejné rozhrania ──────────────────────────────────────────────
   - name: Web (orsf.sk)
@@ -9,16 +14,16 @@ sites:
 
   - name: API (api.orsf.sk)
     url: https://api.orsf.sk/healthz
-    maxResponseTime: 500
+    maxResponseTime: 1500
 
   - name: API readyz (DB + Redis)
     url: https://api.orsf.sk/readyz
-    maxResponseTime: 1000
+    maxResponseTime: 1500
 
   # ── Kľúčové endpointy ──────────────────────────────────────────────
   - name: IČO lookup (autofill)
     url: https://api.orsf.sk/v1/lookup/55609830
-    maxResponseTime: 300
+    maxResponseTime: 1000
 
   - name: Search
     url: https://api.orsf.sk/v1/search?q=test&limit=1
@@ -26,7 +31,7 @@ sites:
 
   - name: Company detail
     url: https://api.orsf.sk/v1/companies/55609830
-    maxResponseTime: 1500
+    maxResponseTime: 2000
     expectedStatusCodes:
       - 200
       - 404
@@ -36,7 +41,7 @@ sites:
   # HTTP 503 keď je posledný sync starší než 72h → incident open.
   - name: Ingestor freshness
     url: https://api.orsf.sk/v1/status
-    maxResponseTime: 1000
+    maxResponseTime: 1500
 
   # ── Doc & SDK ──────────────────────────────────────────────────────
   - name: OpenAPI spec

@@ -1,7 +1,7 @@
 url: https://api.orsf.sk/v1/status
-status: degraded
+status: up
 code: 200
-responseTime: 39833
-lastUpdated: 2026-07-28T23:42:52.954Z
+responseTime: 1069
+lastUpdated: 2026-07-28T23:59:31.939Z
 startTime: 2026-06-22T13:55:30.484Z
 generator: Upptime <https://github.com/upptime/upptime>

@@ -43,9 +43,9 @@
     "slug": "api-api-orsf-sk",
     "status": "degraded",
     "uptime": "94.47%",
-    "uptimeDay": "99.46%",
-    "uptimeWeek": "99.92%",
-    "uptimeMonth": "99.98%",
+    "uptimeDay": "98.44%",
+    "uptimeWeek": "99.78%",
+    "uptimeMonth": "99.95%",
     "uptimeYear": "94.47%",
     "time": 973,
     "timeDay": 27885,
@@ -80,7 +80,7 @@
       "2026-07-11": 42,
       "2026-07-17": 110,
       "2026-07-28": 108,
-      "2026-11-03": 8
+      "2026-11-03": 23
     }
   },
   {
@@ -89,11 +89,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/api.orsf.sk.ico",
     "slug": "api-readyz-db-redis",
     "status": "degraded",
-    "uptime": "99.07%",
-    "uptimeDay": "99.63%",
-    "uptimeWeek": "99.95%",
-    "uptimeMonth": "99.99%",
-    "uptimeYear": "99.07%",
+    "uptime": "99.06%",
+    "uptimeDay": "98.61%",
+    "uptimeWeek": "99.80%",
+    "uptimeMonth": "99.95%",
+    "uptimeYear": "99.06%",
     "time": 632,
     "timeDay": 8115,
     "timeWeek": 1677,
@@ -103,7 +103,7 @@
       "2026-07-02": 472,
       "2026-07-01": 1033,
       "2026-09-26": 279,
-      "2026-11-03": 5
+      "2026-11-03": 20
     }
   },
   {
@@ -112,11 +112,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/api.orsf.sk.ico",
     "slug": "ico-lookup-autofill",
     "status": "degraded",
-    "uptime": "96.71%",
-    "uptimeDay": "99.73%",
-    "uptimeWeek": "99.96%",
-    "uptimeMonth": "99.99%",
-    "uptimeYear": "96.71%",
+    "uptime": "96.70%",
+    "uptimeDay": "98.71%",
+    "uptimeWeek": "99.82%",
+    "uptimeMonth": "99.96%",
+    "uptimeYear": "96.70%",
     "time": 766,
     "timeDay": 54757,
     "timeWeek": 8259,
@@ -143,7 +143,7 @@
       "2026-07-10": 306,
       "2026-07-28": 105,
       "2026-09-03": 126,
-      "2026-11-03": 4
+      "2026-11-03": 19
     }
   },
   {
@@ -152,11 +152,11 @@
     "icon": "https://icons.duckduckgo.com/ip3/api.orsf.sk.ico",
     "slug": "search",
     "status": "degraded",
-    "uptime": "99.81%",
-    "uptimeDay": "99.88%",
-    "uptimeWeek": "99.98%",
-    "uptimeMonth": "99.32%",
-    "uptimeYear": "99.81%",
+    "uptime": "99.80%",
+    "uptimeDay": "98.86%",
+    "uptimeWeek": "99.84%",
+    "uptimeMonth": "99.29%",
+    "uptimeYear": "99.80%",
     "time": 1492,
     "timeDay": 44917,
     "timeWeek": 7318,
@@ -166,7 +166,7 @@
       "2026-07-16": 49,
       "2026-07-28": 20,
       "2026-10-13": 296,
-      "2026-11-03": 2
+      "2026-11-03": 16
     }
   },
   {
